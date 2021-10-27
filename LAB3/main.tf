@@ -23,7 +23,7 @@ resource "aws_subnet" "main" {
 
 # create ec-2
 resource "aws_instance" "main" {
-  ami           = "ami-09e67e426f25ce0d7"
+  ami           = "ami-093bdbade9d2b4510"
   count = 1
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.main.id
