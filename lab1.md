@@ -22,3 +22,7 @@ In this lab, we will try to create the complete infrastructure manually in AWS t
 * Ask your instructor to create a AWS account for your team leader
 
 #### Login into your AWS account using the credentials provided by the instructor.
+
+![](https://github.com/OT-TRAINING/TerraformAWSV2/blob/images/lab1/1.png)
+
+![](https://github.com/OT-TRAINING/TerraformAWSV2/blob/images/lab1/2.png)
