@@ -1,0 +1,3 @@
+In this lab, we will try to create the complete infrastructure manually in GCP to see the problems in manual infrastructure creation.
+
+Create a VPC network with the name team_name-vpc
