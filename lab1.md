@@ -26,3 +26,9 @@ In this lab, we will try to create the complete infrastructure manually in AWS t
 ![](https://github.com/OT-TRAINING/TerraformAWSV2/blob/images/lab1/1.png)
 
 ![](https://github.com/OT-TRAINING/TerraformAWSV2/blob/images/lab1/2.png)
+
+![](https://github.com/OT-TRAINING/TerraformAWSV2/blob/images/lab1/3.png)
+
+![](https://github.com/OT-TRAINING/TerraformAWSV2/blob/images/lab1/4.png)
+
+![](https://github.com/OT-TRAINING/TerraformAWSV2/blob/images/lab1/5.png)
