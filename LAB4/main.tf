@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_internet_gateway" "main" {
   vpc_id = aws_vpc.main.id
   tags = {
-    Name = var.igw_tag
+    Name = "test-igw"
   }
 }
 #  create VPC
@@ -13,7 +13,7 @@ resource "aws_vpc" "main" {
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
   tags = {
-    Name = var.vpc_name
+    Name = "test-vpc"
   }
 }
 
@@ -22,7 +22,7 @@ resource "aws_subnet" "pub_subnet1" {
   cidr_block              = "10.0.1.0/24"
   map_public_ip_on_launch = true
   tags = {
-    Name = var.pub_subnet1
+    Name = "Public-subnet-1"
   }
 }
 
@@ -31,7 +31,7 @@ resource "aws_subnet" "pub_subnet2" {
   cidr_block              = "10.0.2.0/24"
   map_public_ip_on_launch = true
   tags = {
-    Name = var.pub_subnet2
+    Name = "Public-subnet-2"
   }
 }
 
@@ -40,7 +40,7 @@ resource "aws_subnet" "pvt_subnet1" {
   cidr_block              = "10.0.3.0/24"
   map_public_ip_on_launch = true
   tags = {
-    Name = var.pvt_subnet1
+    Name = "Private-subnet-1"
   }
 }
 
@@ -49,18 +49,18 @@ resource "aws_subnet" "pvt_subnet2" {
   cidr_block              = "10.0.4.0/24"
   map_public_ip_on_launch = true
   tags = {
-    Name = var.pvt_subnet2
+    Name = "Private-subnet-2"
   }
 }
 
 resource "aws_instance" "main" {
-  ami           = var.ami_id
-  instance_type = var.instance_type
+  ami           = "ami-082d645d7cbf18b97"
+  instance_type = "t2.micro"
   associate_public_ip_address = true
   vpc_security_group_ids = [aws_security_group.main.id]
   subnet_id     = aws_subnet.pub_subnet1.id
   tags = {
-    Name = var.instance_name
+    Name = "test-ec2-instance"
   }
 }
 
@@ -95,7 +95,7 @@ resource "aws_route_table" "igw_route" {
       gateway_id = aws_internet_gateway.main.id
     }
   tags = {
-    Name = var.rtb_igw_tag
+    Name = "test-route-table"
   }
 }
 
